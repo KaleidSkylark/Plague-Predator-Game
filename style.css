@@ -1,0 +1,214 @@
+/* Google Font import */
+@import url(//fonts.googleapis.com/css?family=Righteous);
+@import url(//fonts.googleapis.com/css?family=Creepster);
+
+/* Body styles */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgb(68, 70, 84);
+}
+
+/* Compact container styles */
+.compact {
+  width: 90vmin;
+  height: 95vmin;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(24, 25, 26);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Info bar styles */
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 1vmin;
+  background-color: rgb(50, 50, 50);
+  border-top-right-radius: 1vmin;
+  border-top-left-radius: 1vmin;
+  color: rgb(232, 255, 254);
+  font: 200 3vmin "Righteous";
+  font-weight: 200;
+}
+.difficulty {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(50, 50, 50);
+}
+#obstacle{
+  border-radius: 1vmin;
+  font: 200 2.3vmin "Righteous";
+  margin-right: auto;
+  margin-left: auto;
+  color: rgb(0, 0, 0);
+  padding: 0.8vmin 1.5vmin;
+  border: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#obstacle:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+#speed, #apply, #musicbtn{
+  margin-left: 1rem;
+  margin-right: 2vmin;
+  border-radius: 1vmin;
+  font: 200 2.3vmin "Righteous";
+  color: rgb(0, 0, 0);
+  padding: 0.8vmin 1.5vmin;
+  border: none;
+  transition: background-color 0.2s ease-in-out;
+}
+button {
+  background-color: rgb(255, 255, 255);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a3edf0;
+}
+
+/* Game board styles */
+.gameboard {
+  width: 90vmin;
+  height: 95vmin;
+  display: grid;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+  background-color: rgb(0, 0, 0);
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Food styles */
+.food {
+  background-image: url('./Resources/Covid.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 0px 10px 10px rgba(255, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+/* Snake head styles */
+.head {
+  background-image: url('./Resources/Vax.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 0px 10px 5px rgb(1, 171, 236);
+  border-radius: 50%;
+}
+
+.obstacle {
+  background-image: url('./Resources/Immune.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 0px 10px 2px rgb(218, 132, 183);
+  border-radius: 50%;
+}
+.modal {
+  position: fixed;
+  width: 30vw;
+  height: 10vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: rgb(255, 255, 255);
+  padding: 2vmin;
+  border-radius: 1vmin;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 2vmin 2vmin rgba(252, 0, 0, 0.2);
+}
+
+#modal-score, #modal-btn {
+  font: 200 3vmin "Righteous";
+}
+
+#modal-score {
+  margin: auto;
+  color: #000000;
+}
+
+#modal-btn {
+  margin-top: 3vh;
+  padding: 1.5vmin 2.5vmin;
+  background-color: #333;
+  color: #ff0000;
+  border: none;
+  border-radius: 0.5vmin;
+  cursor: pointer;
+}
+
+#modal-btn:hover {
+  background-color: #555;
+}
+
+.modal p {
+  font: 200 7vmin "Creepster";
+  font-weight: bold;
+  color: rgb(255, 0, 0);
+}
+
+.controls {
+display: none;
+justify-content: space-evenly;
+font-size: 50vmin;
+}
+.controls div {
+  display: flex;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border-radius: 2.5vmin;
+  padding: 2vmin;
+} 
+.hp-icon {
+  flex: auto;
+  font-size: 5vmin;
+  color:gray;
+  margin-left: 1vmin;
+}
+.hp-icon:nth-child(n+4) {
+  color: gray;
+}
+.difficulty p{
+  margin-left: 2vmin;
+  color: white;
+  font: 200 3vmin "Righteous";
+  font-weight: 200;
+}
+@media screen and (max-width: 800px) {
+  .compact, .gameboard {
+    width: 95vmin;
+    height: 120vmin;
+  }
+  
+  .controls,div{
+    display: flex;
+  }
+}
+
+
+
