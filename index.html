@@ -1,10 +1,14 @@
+<!--
+    Author: Xerx Skylark | BSIT601A 
+    License: This project is licensed under the MIT License. 
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- External Stylesheets -->
     <link rel="stylesheet" href="./style.css">
     <!-- External Scripts -->
-<script src="./script.js" defer></script>
+<script type="module" src="./script.js"></script>
 
 <!-- Meta Tags -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +40,6 @@
             <i class="fa-solid fa-shield-virus hp-icon" style="font-size: 5vmin;"></i>
             <i class="fa-solid fa-shield-virus hp-icon" style="font-size: 5vmin;"></i>
         </div>
-        <!-- <button id="musicbtn">Music: Off</button> -->
         <select id="obstacle">
             <option value="without"selected>Without Obstacles</option>
             <option value="with">With Obstacles</option>
@@ -49,13 +52,15 @@
         <button id="apply">Apply</button>
     </div>
     <!-- Game Board -->
-    <div class="gameboard"></div>
+    <div class="gameboard">
+    </div>
+    
     <!-- Game Controls -->
     <div class="controls">
-        <div><span class="material-symbols-rounded arrow-left" data-direction="ArrowLeft"style="font-size: 5vmin;">keyboard_double_arrow_left</span></div>
-        <div><span class="material-symbols-rounded arrow-up" data-direction="ArrowUp" style="font-size: 5vmin;">keyboard_double_arrow_up</span></div>
-        <div><span class="material-symbols-rounded arrow-right" data-direction="ArrowRight" style="font-size: 5vmin;">keyboard_double_arrow_right</span></div>
-        <div><span class="material-symbols-rounded arrow-down" data-direction="ArrowDown" style="font-size: 5vmin;">keyboard_double_arrow_down</span></div>
+        <div><span class="fa-solid fa-arrow-left" data-direction="ArrowLeft"style="font-size: 5vmin;"></span></div>
+        <div><span class="fa-solid fa-arrow-up" data-direction="ArrowUp" style="font-size: 5vmin;"></span></div>
+        <div><span class="fa-solid fa-arrow-right" data-direction="ArrowRight" style="font-size: 5vmin;"></span></div>
+        <div><span class="fa-solid fa-arrow-down" data-direction="ArrowDown" style="font-size: 5vmin;"></span></div>
     </div>
 </div>
 <!-- Game Over Modal -->
